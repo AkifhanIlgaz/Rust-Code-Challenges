@@ -1,11 +1,10 @@
-/*
-    Print Any Text Type
+use std::fmt::Display;
 
-    Write a function that can accept a String or a &str
-*/
-
-fn info(a: &T) {
-    todo!();
+fn info<T>(a: &T)
+where
+    T: Display,
+{
+    println!("{}", a);
 }
 
 fn main() {
@@ -15,17 +14,16 @@ fn main() {
     info(&b);
 
     // Advanced 1
-    // use std::ffi::CString;
-    
+    //  use std::ffi::CString;
+
     // let c = CString::new("?").unwrap();
-    // info(&input);
+    //  info(&c);
 
     // Advanced 2
     // use std::path::Path;
     // let d = Path::new("/tmp/linkedin-learning");
     // info(d);
 }
-
 
 #[test]
 fn str() {
@@ -39,15 +37,15 @@ fn string() {
     info(&input);
 }
 
-// #[test]
-// fn chars() {
-//     let input = 'r';
-//     info(&input);
-// }
+#[test]
+fn chars() {
+    let input = 'r';
+    info(&input);
+}
 
 // #[test]
 // fn cstring() {
-//     use std::ffi::{CString};
+//     use std::ffi::CString;
 //     let input = CString::new("Rust").unwrap();
 //     info(&input);
 // }
@@ -56,5 +54,5 @@ fn string() {
 // fn path() {
 //     use std::path::Path;
 //     let input = Path::new("/tmp/rust");
-//     info(input);
+//     info(&input);
 // }
