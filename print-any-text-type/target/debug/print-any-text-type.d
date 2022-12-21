@@ -1,0 +1,1 @@
+C:\Users\AKIF\Desktop\Rust\ Code\ Challenges\Rust-Code-Challenges\print-any-text-type\target\debug\print-any-text-type.exe: C:\Users\AKIF\Desktop\Rust\ Code\ Challenges\Rust-Code-Challenges\print-any-text-type\src\main.rs
