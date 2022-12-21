@@ -5,15 +5,15 @@
         Write a function to calculate the median of a list of numbers ( Vec<f32> )
 */
 
-fn median(a: Vec<f32>) -> Option<f32> {
-    let mut a = a;
-    let length = a.len();
-    let middle = length / 2;
-
-    if length == 0 {
+fn median(mut a: Vec<f32>) -> Option<f32> {
+    if a.is_empty() {
         return None;
     }
+
     a.sort_by(|a, b| a.partial_cmp(&b).unwrap());
+
+    let length = a.len();
+    let middle = length / 2;
 
     match length % 2 == 0 {
         true => Some((a[middle] + a[middle - 1]) / 2.),
