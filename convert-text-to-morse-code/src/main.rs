@@ -44,7 +44,7 @@ impl MorseCode for String {
     }
 
     fn to_pulse(ch: char) -> Letter {
-        use Pulse::{Long, Short};
+        use Pulse::*;
 
         let letter = match ch {
             'A' | 'a' => vec![Short, Long],
