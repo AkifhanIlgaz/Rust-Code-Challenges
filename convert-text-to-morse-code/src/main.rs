@@ -13,7 +13,7 @@ type Message = Vec<Letter>;
 trait MorseCode {
     fn to_morse_code(&self) -> Message;
 
-    fn to_pulse(ch: char) -> Letter;
+    fn to_letter(ch: char) -> Letter;
 }
 
 impl std::fmt::Display for Pulse {
@@ -38,12 +38,12 @@ fn print_morse_code(code: &Message) {
 impl MorseCode for String {
     fn to_morse_code(&self) -> Message {
         self.chars()
-            .map(|ch| Self::to_pulse(ch))
+            .map(|ch| Self::to_letter(ch))
             .filter(|letter| !letter.is_empty())
             .collect()
     }
 
-    fn to_pulse(ch: char) -> Letter {
+    fn to_letter(ch: char) -> Letter {
         use Pulse::*;
 
         let letter = match ch {
