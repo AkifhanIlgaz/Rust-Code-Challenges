@@ -1,3 +1,7 @@
+/*
+    Calculate the number of weeks between two dates
+*/
+
 fn weeks_between(a: &str, b: &str) -> i32 {
     let differences: Vec<i32> = b
         .split("-")
