@@ -49,4 +49,6 @@ fn main() {
     let plaintext = vigenere::decrypt(&ciphertext, key);
 
     println!("{}", plaintext);
+
+    println!("{}", vigenere::decrypt("CSOITEUIWUIZNSROCNKFD", "GOLANG"))
 }
